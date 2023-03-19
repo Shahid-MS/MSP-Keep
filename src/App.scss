@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Labrada:wght@800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    font-family: 'Labrada', serif;
+}
+
+#root {
+    font-family: 'Sono', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.nr:hover {
+    color: red;
+}
+
+.ng:hover {
+    color: #198754;
+}
+
+.colsNote {
+    flex: 0 0 auto;
+    width: 22%;
+}
+
+.fonts {
+    font-size: 1.5rem;
+    font-weight: bold
+}
+
+
+.addBtn {
+    border-radius: 50%;
+    margin-top: -1.5rem;
+    margin-right: 1rem;
+}
+
+#footer {
+    background-color: #198754;
+    padding: 0.5rem;
+    color: white;
+}
+
+.jse {
+    display: flex;
+    justify-content: end;
+}
+
+.jsc {
+    display: flex;
+    justify-content: start;
+}
+.hover:hover{
+    color: #004182;
+   
+}
+
+@media (max-width:992px) {
+    .colsNote {
+        flex: 0 0 auto;
+        width: 30%;
+    }
+}
+
+@media (max-width:768px) {
+    .colsNote {
+        margin-left: 1rem;
+        flex: 0 0 auto;
+        width: 42%;
+    }
+
+    .fonts {
+        font-size: 1rem;
+        font-weight: bold
+    }
+
+
+    .jse {
+        justify-content: center;
+    }
+
+    .jsc {
+        justify-content: center;
+    }
+}
+
+@media (max-width:540px) {
+    .colsNote {
+        flex: 0 0 auto;
+        width: 90%;
+
+    }
+}
