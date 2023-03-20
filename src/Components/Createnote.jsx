@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Add from "@mui/icons-material/Add";
 import Note from "./Note";
-import EditIcon from "@mui/icons-material/Edit";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import CheckIcon from "@mui/icons-material/Check";
 
 const Createnote = (props) => {
   const [expand, setExpand] = useState(false);
@@ -89,7 +90,7 @@ const Createnote = (props) => {
           <input
             type="text"
             name="title"
-            className="form-control fonts"
+            className={`form-control fonts input-${props.Dmode}`}
             placeholder={take}
             value={note.title}
             onChange={InputEvent}
@@ -101,7 +102,7 @@ const Createnote = (props) => {
 
           {expand ? (
             <textarea
-              className="form-control"
+              className={`form-control input-${props.Dmode}`}
               rows="6"
               placeholder="Take a note..."
               value={note.content}
@@ -114,11 +115,10 @@ const Createnote = (props) => {
       <div className="d-flex justify-content-center">
         <div className="d-flex justify-content-end w-50">
           <button className="btn btn-success addBtn" onClick={addEvent}>
-            {toggle ? <EditIcon /> : <Add />}
+            {toggle ? <CheckIcon /> : <Add />}
           </button>
         </div>
       </div>
-     
 
       <div className="container mt-2">
         <div className="row">

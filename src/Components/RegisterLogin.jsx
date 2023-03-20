@@ -3,11 +3,11 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-const RegisterLogin = () => {
+const RegisterLogin = (props) => {
   const date = new Date().getFullYear();
   return (
     <>
-      <div class="container mt-5 ">
+      <div class={`container mt-5 white-${props.Dmode}`}>
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 col-md-8 col-10">
             <h2>
@@ -16,8 +16,8 @@ const RegisterLogin = () => {
             <label for="email" class="form-label mt-3">
               Email address
             </label>
-            <input type="email" class="form-control" />
-            <button class="btn btn-success col-12 mt-3">
+            <input type="email" class={`form-control input-${props.Dmode}`} />
+            <button class={`btn btn-success col-12 mt-3`}>
               Continue with email
             </button>
             <hr />
@@ -54,19 +54,27 @@ const RegisterLogin = () => {
               </ul>
             </div>
 
-            <h6 class="text-success text-center mt-1">More ways to sign in</h6>
+            <h6 class={`text-success text-center mt-1 white-${props.Dmode}`}>
+              More ways to sign in
+            </h6>
             <hr />
-            <p class="text-muted text-center mt-3">
+            <p class={`text-muted text-center mt-3  white-${props.Dmode}`}>
               By signing in or creating an account, you agree with our
               <span className="ms-1 me-1">
-                <a href="" class="text-muted text-decoration-none">
-                  Terms & conditions
+                <a
+                  href=""
+                  class={`text-muted text-decoration-none white-${props.Dmode}`}
+                >
+                  <b> Terms & conditions </b>
                 </a>
               </span>
               and
               <span className="ms-1">
-                <a href="" class="text-muted text-muted text-decoration-none">
-                  Privacy statement
+                <a
+                  href=""
+                  class={`text-muted text-muted text-decoration-none white-${props.Dmode} `}
+                >
+                  <b> Privacy statement </b>
                 </a>
               </span>
             </p>

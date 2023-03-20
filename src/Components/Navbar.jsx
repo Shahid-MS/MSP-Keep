@@ -1,11 +1,13 @@
 import logo from "../Images/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 const Navbar = (props) => {
-  
+  const [enable, setEnable] = useState("Enable");
 
   const darkmode = () => {
     props.darkmode();
+    enable === "Enable" ? setEnable("Disable") : setEnable("Enable");
   };
 
   return (
@@ -34,7 +36,7 @@ const Navbar = (props) => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 mt-2 mt-lg-0 justify-content-between">
               <form className="d-flex">
                 <input
-                  className="form-control me-auto"
+                  className={`form-control me-auto input-${props.Dmode}`}
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
@@ -63,7 +65,7 @@ const Navbar = (props) => {
                 />
 
                 <label className={`form-check-label white-${props.Dmode}`}>
-                  Enable Dark Mode
+                  {enable} Dark Mode
                 </label>
               </div>
             </ul>

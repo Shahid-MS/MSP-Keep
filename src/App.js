@@ -33,8 +33,8 @@ const App = () => {
         <Navbar darkmode={darkMode} Dmode={mode} />
         <Routes>
           <Route path="/" element={<Createnote Dmode={mode} />} />
-          <Route path="/login" element={<RegisterLogin />} />
-          <Route path="/register" element={<RegisterLogin />} />
+          <Route path="/login" element={<RegisterLogin Dmode={mode} />} />
+          <Route path="/register" element={<RegisterLogin Dmode={mode} />} />
           <Route path="*" element={<Nopage />} />
         </Routes>
         <Footer Dmode={mode} />

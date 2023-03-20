@@ -18,7 +18,9 @@ const Note = (props) => {
         className={`colsNote shadow me-3 mt-3 text-break rd bgwhite-${props.Dmode}`}
       >
         <h4 className="mt-3">
-          <b>{props.title}</b>
+          <b>
+            {props.id + 1}.{props.title}
+          </b>
         </h4>
         <p className="mt-2">{props.content}</p>
         <div className="d-flex justify-content-between mb-2">
