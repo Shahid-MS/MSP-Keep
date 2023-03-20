@@ -9,7 +9,7 @@ const RegisterLogin = () => {
     <>
       <div class="container mt-5 ">
         <div class="row d-flex justify-content-center">
-          <div class="col-6">
+          <div class="col-lg-6 col-md-8 col-10">
             <h2>
               <b> Sign in or Create account</b>
             </h2>

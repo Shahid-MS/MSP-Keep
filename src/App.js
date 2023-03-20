@@ -6,12 +6,12 @@ import Createnote from "./Components/Createnote";
 import Footer from "./Components/Footer";
 import RegisterLogin from "./Components/RegisterLogin";
 import Nopage from "./Components/Nopage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Createnote />} />
@@ -20,7 +20,7 @@ const App = () => {
           <Route path="*" element={<Nopage />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };

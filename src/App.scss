@@ -58,9 +58,14 @@
     display: flex;
     justify-content: start;
 }
-.hover:hover{
+
+.hover:hover {
     color: #004182;
-   
+
+}
+
+.wd {
+    width: 50%;
 }
 
 @media (max-width:992px) {
@@ -76,6 +81,7 @@
         flex: 0 0 auto;
         width: 42%;
     }
+
 
     .fonts {
         font-size: 1rem;
@@ -97,5 +103,15 @@
         flex: 0 0 auto;
         width: 90%;
 
+    }
+
+    .wd {
+        width: 75%;
+    }
+
+    .addBtn {
+        border-radius: 50%;
+        margin-top: -1.5rem;
+        margin-right: -2.7rem;
     }
 }

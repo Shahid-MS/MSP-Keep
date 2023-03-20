@@ -85,7 +85,7 @@ const Createnote = () => {
           setTake("Take a note...");
         }}
       >
-        <form action="" className="shadow-lg w-50">
+        <form action="" className="shadow-lg wd">
           <input
             type="text"
             name="title"
