@@ -1,13 +1,21 @@
-import React from "react";
 import logo from "../Images/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link } from "react-router-dom";
-const Navbar = () => {
+const Navbar = (props) => {
+  
+
+  const darkmode = () => {
+    props.darkmode();
+  };
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container">
-          <Link to="/" className="navbar-brand">
+      <nav
+        className={`navbar navbar-expand-lg bg-${props.Dmode} navbar-${props.Dmode}`}
+        data-bs-theme={`${props.Dmode}`}
+      >
+        <div className={`container`}>
+          <Link to="/" className={`navbar-brand`}>
             <img src={logo} alt="logo" width="40" height="40" /> MSP - Keep
           </Link>
 
@@ -20,7 +28,7 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className={`navbar-toggler-icon`}></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 mt-2 mt-lg-0 justify-content-between">
@@ -31,7 +39,7 @@ const Navbar = () => {
                   placeholder="Search"
                   aria-label="Search"
                 />
-                <button className="btn">
+                <button className={`btn white-${props.Dmode}`}>
                   <SearchIcon />
                 </button>
               </form>
@@ -48,8 +56,15 @@ const Navbar = () => {
                 </li>
               </div>
               <div className="form-check form-switch mt-2 mt-lg-3 ms-lg-2">
-                <input className="form-check-input me-2" type="checkbox" />
-                <label className="form-check-label">Enable Dark Mode</label>
+                <input
+                  className="form-check-input me-2"
+                  type="checkbox"
+                  onClick={darkmode}
+                />
+
+                <label className={`form-check-label white-${props.Dmode}`}>
+                  Enable Dark Mode
+                </label>
               </div>
             </ul>
           </div>

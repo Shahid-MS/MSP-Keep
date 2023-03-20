@@ -3,12 +3,12 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-const Footer = () => {
+const Footer = (props) => {
   const date = new Date().getFullYear();
   return (
     <>
       <div style={{ marginTop: "auto" }}>
-        <div id="footer" className="mt-4">
+        <div className={`mt-4 footer footer-${props.Dmode}`}>
           <div className="container">
             <div className="row d-flex justify-content-around align-items-center">
               <div className="col-md-5 jsc">Copyright@{date} MS 2.O Inc.</div>

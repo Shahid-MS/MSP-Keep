@@ -7,16 +7,22 @@
     padding: 0;
 }
 
-.navbar-brand {
-    font-family: 'Labrada', serif;
-}
-
 #root {
     font-family: 'Sono', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
+.body-dark {
+    background-color: #024b30;
+}
+
+.navbar-brand {
+    font-family: 'Labrada', serif;
+}
+
+
 
 .nr:hover {
     color: red;
@@ -43,10 +49,14 @@
     margin-right: 1rem;
 }
 
-#footer {
+.footer {
     background-color: #198754;
     padding: 0.5rem;
     color: white;
+}
+
+.footer-dark {
+    background-color: rgb(33, 37, 41);
 }
 
 .jse {
@@ -66,6 +76,20 @@
 
 .wd {
     width: 50%;
+}
+
+.white-dark {
+    color: #fff;
+}
+
+.bgwhite-dark {
+    background: #146c43;
+    color: #fff;
+}
+
+.rd {
+    border-radius: 0.375rem;
+    height: fit-content;
 }
 
 @media (max-width:992px) {

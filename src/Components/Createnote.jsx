@@ -3,7 +3,7 @@ import Add from "@mui/icons-material/Add";
 import Note from "./Note";
 import EditIcon from "@mui/icons-material/Edit";
 
-const Createnote = () => {
+const Createnote = (props) => {
   const [expand, setExpand] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [editItem, setEditItem] = useState(undefined);
@@ -79,7 +79,7 @@ const Createnote = () => {
   return (
     <>
       <div
-        className="CreateNote d-flex justify-content-center mt-4"
+        className={`CreateNote d-flex justify-content-center mt-4`}
         onDoubleClick={() => {
           setExpand(false);
           setTake("Take a note...");
@@ -118,6 +118,7 @@ const Createnote = () => {
           </button>
         </div>
       </div>
+     
 
       <div className="container mt-2">
         <div className="row">
@@ -130,6 +131,7 @@ const Createnote = () => {
                 content={val.content}
                 deleteItem={onDelete}
                 editItem={onEdit}
+                Dmode={props.Dmode}
               />
             );
           })}
