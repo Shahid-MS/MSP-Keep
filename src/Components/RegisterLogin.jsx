@@ -57,12 +57,14 @@ const RegisterLogin = () => {
             <h6 class="text-success text-center mt-1">More ways to sign in</h6>
             <hr />
             <p class="text-muted text-center mt-3">
-              By signing in or creating an account, you agree with our<span><a href="" class="text-muted text-decoration-none">
+              By signing in or creating an account, you agree with our
+              <span className="ms-1 me-1">
+                <a href="" class="text-muted text-decoration-none">
                   Terms & conditions
                 </a>
               </span>
               and
-              <span>
+              <span className="ms-1">
                 <a href="" class="text-muted text-muted text-decoration-none">
                   Privacy statement
                 </a>
