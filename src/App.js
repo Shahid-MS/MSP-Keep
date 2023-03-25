@@ -35,7 +35,7 @@ const App = () => {
           <Route path="/" element={<Createnote Dmode={mode} />} />
           <Route path="/login" element={<RegisterLogin Dmode={mode} />} />
           <Route path="/register" element={<RegisterLogin Dmode={mode} />} />
-          <Route path="*" element={<Nopage />} />
+          <Route path="*" element={<Nopage Dmode={mode} />} />
         </Routes>
         <Footer Dmode={mode} />
       </HashRouter>
