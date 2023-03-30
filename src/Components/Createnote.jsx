@@ -23,11 +23,18 @@ const Createnote = (props) => {
   };
 
   const onDelete = (id) => {
+
+    if(toggle===true){
+      alert("Can't delete in edit mode");
+    }
+    else{
+
     setAddItem((prevData) => {
       return prevData.filter((val, idx) => {
         return idx !== id;
       });
     });
+  }
   };
 
   const onEdit = (id) => {
